@@ -19,7 +19,7 @@
 | Источник | Идея | Вес |
 |---|---|---|
 | BM25 | Okapi BM25 по слову и биграммам, текст объявления расширен кликовыми запросами | 1.00 |
-| char TF-IDF | `char_wb` 3–4 граммы, устойчивость к опечаткам и морфологии | 0.55 |
+| char TF-IDF | `char_wb` 3-4 граммы, устойчивость к опечаткам и морфологии | 0.55 |
 | Collaborative kNN | Похожие train-запросы -> их выбранные объявления | 0.85 |
 | Приор микрокатегории | Rocchio-центроид, top-8 микрокатегорий | 0.35 |
 | Приор категории | Rocchio-центроид, top-3 категорий | 0.15 |
@@ -105,7 +105,7 @@ char-TF-IDF - десятые), без нормировки веса `W` не и�
   `tf_norm = tf * (k1 + 1) / (tf + k1 * (1 - b + b * dl / avgdl))`,
   `k1=1.2`, `b=0.6`.
 - **TF-IDF** - `sklearn.feature_extraction.text.TfidfVectorizer`
-  (`char_wb` 3–4 для объявлений, `word` 1–2 для пространства запросов).
+  (`char_wb` 3–4 для объявлений, `word` 1-2 для пространства запросов).
 - **CountVectorizer** - для BM25-индекса.
 - **Rocchio-центроиды** - `scipy.sparse` + `sklearn.preprocessing.normalize`.
 - **Русский стемминг** - `nltk.stem.snowball.SnowballStemmer("russian")`.
